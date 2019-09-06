@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        .waves {
+            position: relative;
+            overflow: hidden;
+            width: 375px;
+            height: 50px;
+        }
+
+        .waves::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: -100%;
+            background: linear-gradient(to right, #09bb07, #ffffff, #09bb07,#ffffff,#09bb07);
+            background-size: 100% 100%;
+            z-index: -1;
+            animation: move 2s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="waves">
+</div>
+</body>
+</html>
